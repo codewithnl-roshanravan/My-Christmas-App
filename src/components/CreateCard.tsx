@@ -18,7 +18,9 @@ const CreateCard: React.FC<CreateCardProps> = ({ name }) => {
             transform: "scale(2)",
             transformOrigin: "center",
             color: "white",
+            margin: "auto",
             paddingTop: "130px",
+            paddingLeft: "170px",
             borderRadius: "12px",
           },
         });
@@ -33,7 +35,6 @@ const CreateCard: React.FC<CreateCardProps> = ({ name }) => {
   };
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
-  
       <div
         ref={cardRef}
         style={{
@@ -48,7 +49,6 @@ const CreateCard: React.FC<CreateCardProps> = ({ name }) => {
           animation: "cardAnimation 3s infinite",
         }}
       >
- 
         <h2
           style={{
             fontSize: "24px",
@@ -56,7 +56,6 @@ const CreateCard: React.FC<CreateCardProps> = ({ name }) => {
             animation: "textAnimation 2s infinite",
           }}
         >
-       
           Merry Christmas 🎄, {name || "Friend"}!{" "}
         </h2>{" "}
         <p style={{ marginTop: "10px" }}>Wishing you joy and happiness!</p>{" "}
@@ -74,11 +73,9 @@ const CreateCard: React.FC<CreateCardProps> = ({ name }) => {
           margin: "20px auto",
         }}
       >
-    
         Download Card
       </button>
       <style jsx>{`
-    
         @keyframes textAnimation {
           0% {
             transform: scale(1);
@@ -95,4 +92,3 @@ const CreateCard: React.FC<CreateCardProps> = ({ name }) => {
   );
 };
 export default CreateCard;
-
